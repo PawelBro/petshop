@@ -24,5 +24,7 @@ test('Invalid id supplied', async ({ request }) => {
     const invalidPetId = 'invalid-id';
     const response = await request.get(`/pet/${invalidPetId}`);
 
+    console.log("======= GET RESPONSE CODE =======");
+    console.log(response.status());
     expect(response.status()).toBe(400);
 });
